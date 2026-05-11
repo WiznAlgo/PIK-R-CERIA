@@ -38,20 +38,6 @@ di `src/lib/site-data.ts`:
 - Folder modul: `[LINK_GOOGLE_DRIVE_MODUL]`
 - Link tiap PDF: `[LINK_GDRIVE_*]`
 
-## Yang Perlu Diisi Sebelum Publish
-
-1. Nama sekolah resmi untuk mengganti `SMAN [NAMA SEKOLAH]`.
-2. Logo final PIK-R CERIA DENSATGA.
-3. Link Google Drive untuk 6 modul PDF:
-   - Dasar PIK-R
-   - PKBR
-   - Risiko Seksualitas
-   - P.U.P
-   - Life Skills
-   - 8 Fungsi Keluarga
-4. Pastikan nomor Admin Wisnu dan Koor Khansa sudah benar.
-5. Review semua materi bersama pembina/Guru BK.
-
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

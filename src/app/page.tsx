@@ -4,7 +4,6 @@ import {
   BookOpen,
   CheckCircle2,
   MessageCircleHeart,
-  ShieldCheck,
 } from "lucide-react";
 import { PageShell } from "@/components/site/page-shell";
 import { Badge } from "@/components/ui/badge";
@@ -18,7 +17,6 @@ import {
 } from "@/components/ui/card";
 import {
   benefits,
-  contentChecklist,
   homepageStats,
   pageHighlights,
   site,
@@ -174,38 +172,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-ceria-gray px-4 py-14 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <Badge variant="yellow">Checklist konten</Badge>
-            <h2 className="mt-4 text-2xl font-extrabold tracking-[-0.03em] text-ceria-dark sm:text-3xl">
-              Yang perlu kamu isi sebelum publish.
-            </h2>
-            <p className="mt-4 text-sm leading-7 text-slate-600">
-              Semua data utama sengaja dikumpulkan di satu file supaya gampang
-              diganti nanti: <span className="font-semibold text-slate-800">src/lib/site-data.ts</span>.
-            </p>
-          </div>
-          <div className="grid gap-3">
-            {contentChecklist.map((item) => (
-              <div
-                key={item.label}
-                className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
-              >
-                <div className="flex gap-4">
-                  <ShieldCheck className="mt-1 h-5 w-5 shrink-0 text-ceria-toska" aria-hidden="true" />
-                  <div>
-                    <p className="font-bold text-ceria-dark">{item.label}</p>
-                    <p className="mt-1 text-sm leading-6 text-slate-600">
-                      {item.value}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </PageShell>
   );
 }

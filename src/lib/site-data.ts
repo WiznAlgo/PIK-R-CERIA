@@ -134,32 +134,6 @@ export const homepageStats = [
   { value: "2026", label: "dikelola siswa", icon: CalendarDays },
 ];
 
-export const contentChecklist = [
-  {
-    label: "Nama sekolah",
-    value: "Ganti SMAN [NAMA SEKOLAH] dengan nama resmi sekolah.",
-  },
-  {
-    label: "Logo organisasi",
-    value:
-      "Isi [LINK_LOGO] atau simpan logo di folder public lalu update komponen Logo.",
-  },
-  {
-    label: "Link Google Drive modul",
-    value:
-      "Ganti semua [LINK_GDRIVE_*] di src/lib/site-data.ts dengan link Drive PDF.",
-  },
-  {
-    label: "Kontak resmi",
-    value: "Pastikan nomor Admin Wisnu dan Koor Khansa sudah final sebelum publish.",
-  },
-  {
-    label: "Materi & legal",
-    value:
-      "Pastikan modul sudah disetujui pembina/Guru BK dan tidak memberi diagnosis.",
-  },
-];
-
 export const footerLinks = [
   { label: "Beranda", href: "/", icon: Home },
   { label: "Alur", href: "/alur-konseling", icon: MessageCircleHeart },
