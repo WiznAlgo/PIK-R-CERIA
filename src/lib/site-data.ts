@@ -1,6 +1,9 @@
 import {
   BookOpen,
   Brain,
+  CalendarDays,
+  CheckCircle2,
+  ClipboardList,
   HeartHandshake,
   Home,
   LibraryBig,
@@ -8,7 +11,6 @@ import {
   MessageCircleHeart,
   PhoneCall,
   ShieldCheck,
-  Sparkles,
   UsersRound,
 } from "lucide-react";
 
@@ -23,7 +25,7 @@ export const site = {
   adminChat:
     "https://wa.me/6282233412942?text=Halo%20Kak%20Wisnu,%20saya%20dari%20web%20PIK-R%20CERIA.%20Mau%20konseling",
   logoPlaceholder: "[LINK_LOGO]",
-  moduleZip: "#",
+  moduleDriveFolder: "[LINK_GOOGLE_DRIVE_MODUL]",
 };
 
 export const navItems = [
@@ -89,37 +91,73 @@ export const modules = [
   {
     title: "Dasar PIK-R",
     description: "Pondasi awal jadi remaja berencana.",
+    driveUrl: "[LINK_GDRIVE_DASAR_PIKR]",
   },
   {
     title: "PKBR",
     description: "Pendidikan Kesehatan Reproduksi Remaja.",
-  },
-  {
-    title: "HIV AIDS",
-    description: "Kenali cara penularan & pencegahan.",
+    driveUrl: "[LINK_GDRIVE_PKBR]",
   },
   {
     title: "Risiko Seksualitas",
-    description: "Pahami batasan & dampaknya.",
+    description:
+      "Pahami batasan, dampak, pencegahan HIV AIDS, dan cara menjaga diri.",
+    driveUrl: "[LINK_GDRIVE_RISIKO_SEKSUALITAS]",
   },
   {
     title: "P.U.P",
     description: "Pendewasaan Usia Perkawinan.",
+    driveUrl: "[LINK_GDRIVE_PUP]",
   },
   {
     title: "Life Skills",
     description: "Skill bertahan hidup ala remaja.",
+    driveUrl: "[LINK_GDRIVE_LIFE_SKILLS]",
   },
   {
     title: "8 Fungsi Keluarga",
     description: "Keluarga keren itu yang gimana sih?",
+    driveUrl: "[LINK_GDRIVE_8_FUNGSI_KELUARGA]",
   },
 ];
 
 export const pageHighlights = [
-  { title: "Alur mudah", href: "/alur-konseling", icon: Sparkles },
-  { title: "Konselor ramah", href: "/konselor", icon: UsersRound },
-  { title: "Modul gratis", href: "/modul", icon: BookOpen },
+  { title: "Alur jelas", href: "/alur-konseling", icon: ClipboardList },
+  { title: "Konselor terkurasi", href: "/konselor", icon: UsersRound },
+  { title: "Modul Google Drive", href: "/modul", icon: BookOpen },
+];
+
+export const homepageStats = [
+  { value: "4", label: "langkah konseling", icon: CheckCircle2 },
+  { value: "3", label: "konselor sebaya", icon: UsersRound },
+  { value: "6", label: "modul siap dibaca", icon: LibraryBig },
+  { value: "2026", label: "dikelola siswa", icon: CalendarDays },
+];
+
+export const contentChecklist = [
+  {
+    label: "Nama sekolah",
+    value: "Ganti SMAN [NAMA SEKOLAH] dengan nama resmi sekolah.",
+  },
+  {
+    label: "Logo organisasi",
+    value:
+      "Isi [LINK_LOGO] atau simpan logo di folder public lalu update komponen Logo.",
+  },
+  {
+    label: "Link Google Drive modul",
+    value:
+      "Ganti semua [LINK_GDRIVE_*] di src/lib/site-data.ts dengan link Drive PDF.",
+  },
+  {
+    label: "Kontak resmi",
+    value: "Pastikan nomor Admin Wisnu dan Koor Khansa sudah final sebelum publish.",
+  },
+  {
+    label: "Materi & legal",
+    value:
+      "Pastikan modul sudah disetujui pembina/Guru BK dan tidak memberi diagnosis.",
+  },
 ];
 
 export const footerLinks = [

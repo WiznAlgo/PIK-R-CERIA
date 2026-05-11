@@ -1,4 +1,4 @@
-import { Download, LibraryBig } from "lucide-react";
+import { ExternalLink, FolderOpen, LibraryBig } from "lucide-react";
 
 import { PageShell } from "@/components/site/page-shell";
 import { SectionHeading } from "@/components/site/section-heading";
@@ -19,9 +19,26 @@ export default function ModulesPage() {
         <SectionHeading
           eyebrow="Modul Gratis"
           title="Perpustakaan Modul PIK-R CERIA"
-          description="Baca & download gratis buat nambah wawasan."
+          description="Baca & download gratis lewat Google Drive supaya file PDF tidak membebani server website."
         />
-        <div className="mx-auto mt-12 grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-8 max-w-7xl rounded-xl border border-ceria-toska/20 bg-white p-5 shadow-sm">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="font-bold text-ceria-dark">Folder Drive modul</p>
+              <p className="mt-1 text-sm leading-6 text-slate-600">
+                Ganti placeholder dengan folder Google Drive final saat file
+                sudah siap.
+              </p>
+            </div>
+            <Button asChild variant="outline">
+              <a href={site.moduleDriveFolder}>
+                <FolderOpen className="h-4 w-4" aria-hidden="true" />
+                Buka Folder Drive
+              </a>
+            </Button>
+          </div>
+        </div>
+        <div className="mx-auto mt-8 grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {modules.map((module) => (
             <Card key={module.title} className="flex h-full flex-col">
               <CardHeader>
@@ -33,9 +50,12 @@ export default function ModulesPage() {
               </CardHeader>
               <CardContent className="mt-auto">
                 <Button asChild variant="outline" className="w-full">
-                  <a href={site.moduleZip} aria-label={`Download PDF ${module.title}`}>
-                    <Download className="h-4 w-4" aria-hidden="true" />
-                    Download PDF
+                  <a
+                    href={module.driveUrl}
+                    aria-label={`Buka Google Drive ${module.title}`}
+                  >
+                    <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                    Buka di Google Drive
                   </a>
                 </Button>
               </CardContent>

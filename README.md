@@ -31,12 +31,26 @@ npm run build
 
 ## Aset
 
-Logo dan file modul masih memakai placeholder:
+Logo dan file modul masih memakai placeholder. Semua data utama mudah diganti
+di `src/lib/site-data.ts`:
 
 - Logo: `[LINK_LOGO]`
-- Modul: `[LINK_MODUL_ZIP]`
+- Folder modul: `[LINK_GOOGLE_DRIVE_MODUL]`
+- Link tiap PDF: `[LINK_GDRIVE_*]`
 
-Ganti nilai placeholder di `src/lib/site-data.ts` saat aset final tersedia.
+## Yang Perlu Diisi Sebelum Publish
+
+1. Nama sekolah resmi untuk mengganti `SMAN [NAMA SEKOLAH]`.
+2. Logo final PIK-R CERIA DENSATGA.
+3. Link Google Drive untuk 6 modul PDF:
+   - Dasar PIK-R
+   - PKBR
+   - Risiko Seksualitas
+   - P.U.P
+   - Life Skills
+   - 8 Fungsi Keluarga
+4. Pastikan nomor Admin Wisnu dan Koor Khansa sudah benar.
+5. Review semua materi bersama pembina/Guru BK.
 
 ## Deploy on Vercel
 

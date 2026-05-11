@@ -13,12 +13,16 @@ const config: Config = {
         foreground: "var(--foreground)",
         ceria: {
           toska: "#00BFA6",
+          dark: "#073B3A",
+          ink: "#102A2A",
           kuning: "#FFC107",
           gray: "#F5F5F5",
+          mist: "#E8F7F4",
         },
       },
       boxShadow: {
         soft: "0 18px 45px rgba(15, 23, 42, 0.10)",
+        card: "0 20px 60px rgba(15, 23, 42, 0.08)",
       },
     },
   },

@@ -4,17 +4,23 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0f172a;
+  --foreground: #102a2a;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+::selection {
+  background: #00bfa6;
+  color: #ffffff;
 }
 
 @layer utilities {

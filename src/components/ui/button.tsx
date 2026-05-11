@@ -10,11 +10,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-ceria-kuning text-slate-950 shadow-soft hover:bg-ceria-kuning/90",
+          "bg-ceria-dark text-white shadow-soft hover:bg-ceria-ink",
         primary:
           "bg-ceria-toska text-white shadow-soft hover:bg-ceria-toska/90",
         outline:
-          "border border-ceria-toska/20 bg-white text-ceria-toska shadow-soft hover:bg-ceria-toska/10",
+          "border border-ceria-toska/25 bg-white text-ceria-dark shadow-sm hover:bg-ceria-mist",
         ghost: "text-slate-700 hover:bg-slate-100 hover:text-ceria-toska",
       },
       size: {
