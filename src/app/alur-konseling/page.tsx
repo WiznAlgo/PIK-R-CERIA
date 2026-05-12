@@ -1,56 +1,78 @@
-import { ArrowRight, MessageCircleHeart } from "lucide-react";
+import { MessageCircleHeart } from "lucide-react";
 
 import { PageShell } from "@/components/site/page-shell";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { counselingSteps, site } from "@/lib/site-data";
 
 export default function CounselingFlowPage() {
   return (
     <PageShell>
-      <section className="bg-ceria-gray px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+      <section className="relative overflow-hidden px-5 pb-10 pt-14 sm:px-8 sm:pt-20">
+        <div className="organic-blob pointer-events-none absolute -top-20 left-[-6rem] h-80 w-80 bg-ceria-toska opacity-25" />
         <SectionHeading
-          eyebrow="Alur Konseling"
-          title="Gini Cara Curhat di PIK-R CERIA"
-          description="Nggak perlu bingung mulai dari mana. Kamu cukup hubungi admin, lalu kami bantu arahkan dengan aman dan rahasia."
+          eyebrow="Bab II — Cara Kerja"
+          title={
+            <>
+              Gimana <span className="font-medium italic">caranya</span>
+              <br />
+              <span className="marker font-medium">cerita di sini?</span>
+            </>
+          }
+          description="Nggak ada form aneh-aneh. Nggak ada antrian formal. Cuma empat langkah pelan yang kami jaga biar tetap aman."
         />
-        <div className="mx-auto mt-12 grid max-w-7xl gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {counselingSteps.map((step, index) => (
-            <Card key={step.title} className="relative overflow-hidden">
-              <div className="absolute right-4 top-4 text-6xl font-extrabold text-ceria-toska/10">
-                {index + 1}
-              </div>
-              <CardHeader>
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-ceria-toska text-white shadow-soft">
-                  <step.icon className="h-7 w-7" aria-hidden="true" />
+      </section>
+
+      <section className="border-t-2 border-ceria-ink bg-ceria-krem">
+        <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-24">
+          <ol className="space-y-14 sm:space-y-20">
+            {counselingSteps.map((step, index) => (
+              <li
+                key={step.title}
+                className={`grid grid-cols-12 gap-x-4 gap-y-3 ${
+                  index % 2 === 1 ? "sm:pl-16 lg:pl-32" : "sm:pr-16 lg:pr-32"
+                }`}
+              >
+                <div className="col-span-12 sm:col-span-3">
+                  <p className="font-display text-7xl leading-none text-ceria-ink/15 sm:text-8xl">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <p className="font-hand mt-1 -rotate-3 text-2xl text-ceria-coral">
+                    {["sapa", "sambung", "cerita", "lega"][index]}~
+                  </p>
                 </div>
-                <CardTitle>{step.title}</CardTitle>
-                <CardDescription>{step.description}</CardDescription>
-              </CardHeader>
-              {index < counselingSteps.length - 1 ? (
-                <CardContent className="hidden xl:block">
-                  <ArrowRight
-                    className="h-6 w-6 text-ceria-kuning"
-                    aria-hidden="true"
-                  />
-                </CardContent>
-              ) : null}
-            </Card>
-          ))}
+                <div className="col-span-12 border-l-2 border-ceria-ink pl-5 sm:col-span-9 sm:pl-8">
+                  <step.icon className="mb-4 h-7 w-7 text-ceria-dark" aria-hidden="true" />
+                  <h3 className="font-display text-3xl leading-tight sm:text-4xl">
+                    {index % 2 === 1 ? (
+                      <em className="font-medium">{step.title}</em>
+                    ) : (
+                      step.title
+                    )}
+                  </h3>
+                  <p className="mt-3 max-w-lg text-ceria-ink/75">
+                    {step.description}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
-        <div className="mx-auto mt-10 max-w-2xl rounded-xl bg-white p-5 text-center shadow-soft">
-          <p className="mb-5 text-sm leading-6 text-slate-600">
+      </section>
+
+      <section className="relative overflow-hidden bg-ceria-ink text-white">
+        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 py-14 sm:flex-row sm:items-center sm:px-8">
+          <div>
+            <p className="font-hand text-3xl text-ceria-kuning">eh,</p>
+            <h2 className="mt-1 font-display text-3xl leading-tight sm:text-4xl">
+              Udah ngerti alurnya. Sekarang giliran kamu.
+            </h2>
+            <p className="mt-3 max-w-xl text-sm leading-6 text-white/70">
             Kalau kamu sudah siap mulai cerita, chat admin dulu ya. Semua proses
             tetap dimoderasi supaya aman.
-          </p>
-          <Button asChild size="lg" className="w-full sm:w-auto">
+            </p>
+          </div>
+          <Button asChild size="lg">
             <a href={site.adminChat} target="_blank" rel="noreferrer">
               <MessageCircleHeart className="h-5 w-5" aria-hidden="true" />
               Chat Admin Wisnu

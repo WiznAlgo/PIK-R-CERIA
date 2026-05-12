@@ -6,7 +6,7 @@ import { Navbar } from "./navbar";
 
 export function PageShell({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-ceria-krem text-ceria-ink">
       <Navbar />
       <main>{children}</main>
       <Footer />

@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        display: ["Fraunces", "Georgia", "serif"],
+        hand: ["Caveat", "cursive"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -18,6 +22,8 @@ const config: Config = {
           kuning: "#FFC107",
           gray: "#F5F5F5",
           mist: "#E8F7F4",
+          krem: "#FAF4E8",
+          coral: "#F08A73",
         },
       },
       boxShadow: {

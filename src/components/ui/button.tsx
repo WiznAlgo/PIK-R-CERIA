@@ -5,17 +5,17 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ceria-toska focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-semibold ring-offset-background transition-all active:scale-[0.98] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ceria-toska/25 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default:
-          "bg-ceria-dark text-white shadow-soft hover:bg-ceria-ink",
+          "bg-ceria-kuning text-ceria-ink shadow-soft hover:-rotate-1 hover:brightness-105",
         primary:
-          "bg-ceria-toska text-white shadow-soft hover:bg-ceria-toska/90",
+          "bg-ceria-ink text-white shadow-soft hover:bg-ceria-dark",
         outline:
-          "border border-ceria-toska/25 bg-white text-ceria-dark shadow-sm hover:bg-ceria-mist",
-        ghost: "text-slate-700 hover:bg-slate-100 hover:text-ceria-toska",
+          "border-2 border-ceria-ink bg-transparent text-ceria-ink shadow-none hover:bg-ceria-ink hover:text-white",
+        ghost: "text-ceria-ink hover:bg-ceria-ink/10",
       },
       size: {
         default: "h-11 px-5 py-2",
